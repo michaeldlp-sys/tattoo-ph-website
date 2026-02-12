@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ink Islands Tattoo Studio</title>
+  <meta name="description" content="Custom tattoo studio in the Philippines. Clean lines, bold stories, island soul." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sora:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-grain" aria-hidden="true"></div>
+    <nav class="nav container">
+      <a href="#top" class="brand">Ink Islands</a>
+      <div class="nav-links">
+        <a href="#portfolio">Styles</a>
+        <a href="#process">Process</a>
+        <a href="#book">Book</a>
+      </div>
+    </nav>
+
+    <div id="top" class="container hero-content reveal">
+      <p class="eyebrow">Tattoo Studio • Philippines</p>
+      <h1>Marks With Meaning. Lines With Discipline.</h1>
+      <p class="lead">
+        We design custom tattoos rooted in Filipino identity and modern craft.
+        Every piece is built with clean execution, clear consultation, and long-term wear in mind.
+      </p>
+      <div class="hero-actions">
+        <a class="btn" href="#book">Book Consultation</a>
+        <a class="btn btn-outline" href="#gallery">Recent Works</a>
+      </div>
+      <ul class="hero-meta">
+        <li>Based in Cebu</li>
+        <li>Custom Design Only</li>
+        <li>Strict Hygiene Standards</li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section id="portfolio" class="section container reveal">
+      <p class="section-kicker">Specialties</p>
+      <h2>Featured Styles</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Black & Grey</h3>
+          <p>Depth-focused realism, portraits, and sacred geometry with controlled gradients.</p>
+        </article>
+        <article class="card">
+          <h3>Traditional</h3>
+          <p>Strong silhouettes, high-contrast color packs, and timeless flash foundations.</p>
+        </article>
+        <article class="card">
+          <h3>Fine Line</h3>
+          <p>Minimal compositions, botanical detail, script, and soft illustrative elements.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery" class="section section-deep reveal">
+      <div class="container">
+        <p class="section-kicker">Portfolio</p>
+        <h2>Recent Works</h2>
+        <p class="gallery-note">Replace these placeholders with your actual healed and fresh tattoo photos.</p>
+        <div class="gallery-grid">
+          <figure class="gallery-item">
+            <img src="https://placehold.co/800x1000/131313/f1ede6?text=Portrait+Piece" alt="Portrait tattoo placeholder" />
+            <figcaption>Portrait Realism</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://placehold.co/800x1000/1b1b1b/ffd6be?text=Traditional+Flash" alt="Traditional tattoo placeholder" />
+            <figcaption>Traditional Flash</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://placehold.co/800x1000/0d0d0d/e8e8e8?text=Fine+Line+Work" alt="Fine line tattoo placeholder" />
+            <figcaption>Fine Line Detail</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="section container reveal">
+      <p class="section-kicker">How It Works</p>
+      <h2>Our Booking Process</h2>
+      <ol class="steps">
+        <li><strong>Consultation:</strong> Share your concept, reference images, and placement.</li>
+        <li><strong>Design:</strong> We prepare a draft aligned with your skin tone and body flow.</li>
+        <li><strong>Session:</strong> Sterile setup, precise stencil prep, and focused execution.</li>
+      </ol>
+    </section>
+
+    <section id="book" class="section section-accent reveal">
+      <div class="container booking-layout">
+        <div>
+          <p class="section-kicker">Inquiries</p>
+          <h2>Start Your Design</h2>
+          <p>Tell us your idea, size, and placement. We reply within 24 hours.</p>
+          <p class="contact-line">Instagram: <a href="#">@inkislands.cebu</a></p>
+          <p class="contact-line">Facebook: <a href="#">Ink Islands Tattoo Studio</a></p>
+        </div>
+
+        <form id="inquiry-form" class="form">
+          <input type="text" name="name" placeholder="Your name" aria-label="Your name" required />
+          <input type="email" name="email" placeholder="Email address" aria-label="Email address" required />
+          <textarea rows="4" name="idea" placeholder="Tattoo idea" required></textarea>
+          <button type="submit" class="btn">Send Inquiry</button>
+          <p id="form-status" class="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <p>Ink Islands Tattoo Studio • Cebu, Philippines</p>
+      <p>Open Tue-Sun • 12:00 PM to 9:00 PM</p>
+      <p>© <span id="year"></span> Ink Islands</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
