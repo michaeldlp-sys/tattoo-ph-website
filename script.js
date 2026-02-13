@@ -5,7 +5,8 @@ const status = document.getElementById("form-status");
 const year = document.getElementById("year");
 const revealItems = document.querySelectorAll(".reveal");
 const filterChips = document.querySelectorAll(".filter-chip");
-const galleryItems = document.querySelectorAll(".gallery-item");
+const generalGalleryItems = document.querySelectorAll("#gallery .gallery-item");
+const lightboxItems = document.querySelectorAll(".gallery-item");
 const lightbox = document.getElementById("lightbox");
 const lightboxImage = document.getElementById("lightbox-image");
 const lightboxCaption = document.getElementById("lightbox-caption");
@@ -78,7 +79,7 @@ if (form && status) {
   });
 }
 
-if (filterChips.length && galleryItems.length) {
+if (filterChips.length && generalGalleryItems.length) {
   filterChips.forEach((chip) => {
     chip.addEventListener("click", () => {
       const selected = chip.dataset.filter || "all";
@@ -86,7 +87,7 @@ if (filterChips.length && galleryItems.length) {
       filterChips.forEach((item) => item.classList.remove("is-active"));
       chip.classList.add("is-active");
 
-      galleryItems.forEach((card) => {
+      generalGalleryItems.forEach((card) => {
         const style = card.dataset.style || "";
         const isVisible = selected === "all" || style === selected;
         card.classList.toggle("is-hidden", !isVisible);
@@ -109,9 +110,13 @@ function closeLightbox() {
   }
 }
 
-if (galleryItems.length && lightbox && lightboxImage) {
-  galleryItems.forEach((item) => {
-    item.addEventListener("click", () => {
+if (lightboxItems.length && lightbox && lightboxImage) {
+  lightboxItems.forEach((item) => {
+    item.addEventListener("click", (event) => {
+      if (event.target instanceof Element && event.target.closest(".artist-jump")) {
+        return;
+      }
+
       const image = item.querySelector("img");
       const caption = item.querySelector("figcaption span");
       if (!image) {

@@ -20,6 +20,7 @@
       </a>
       <div class="nav-links">
         <a href="#artists">Artists</a>
+        <a href="#artist-galleries">Artist Works</a>
         <a href="#portfolio">Styles</a>
         <a href="#process">Process</a>
         <a href="#care">Aftercare</a>
@@ -58,28 +59,31 @@
       <h2>Choose Your Artist</h2>
       <p class="artist-note">Match with an artist whose style aligns with your concept before booking.</p>
       <div class="artist-grid">
-        <article class="artist-card">
+        <article id="artist-marco" class="artist-card">
           <img src="https://placehold.co/600x720/1a1a1a/e8e8e8?text=Artist+01" alt="Artist profile placeholder one" />
           <div>
             <h3>Marco</h3>
             <p>Black & Grey realism, portrait layering, sleeve composition.</p>
             <p class="artist-tags">#blackgrey #realism #portrait</p>
+            <a class="artist-link" href="#artist-marco-gallery">View Marco's Works</a>
           </div>
         </article>
-        <article class="artist-card">
+        <article id="artist-ivy" class="artist-card">
           <img src="https://placehold.co/600x720/141414/f3d0b5?text=Artist+02" alt="Artist profile placeholder two" />
           <div>
             <h3>Ivy</h3>
             <p>Fine line florals, script work, minimalist body flow placements.</p>
             <p class="artist-tags">#fineline #script #minimal</p>
+            <a class="artist-link" href="#artist-ivy-gallery">View Ivy's Works</a>
           </div>
         </article>
-        <article class="artist-card">
+        <article id="artist-renz" class="artist-card">
           <img src="https://placehold.co/600x720/191919/f0d9be?text=Artist+03" alt="Artist profile placeholder three" />
           <div>
             <h3>Renz</h3>
             <p>Traditional and neo-traditional color packs with bold contrast.</p>
             <p class="artist-tags">#traditional #color #neo-traditional</p>
+            <a class="artist-link" href="#artist-renz-gallery">View Renz's Works</a>
           </div>
         </article>
       </div>
@@ -107,8 +111,8 @@
     <section id="gallery" class="section section-deep reveal">
       <div class="container">
         <p class="section-kicker">Portfolio</p>
-        <h2>Recent Works</h2>
-        <p class="gallery-note">Mock gallery only for layout preview. Replace with actual healed and fresh tattoo photos later.</p>
+        <h2>All Artist Works</h2>
+        <p class="gallery-note">Browse all works first, then jump to the artist gallery from each piece.</p>
         <div class="gallery-filters" role="tablist" aria-label="Filter gallery by style">
           <button class="filter-chip is-active" type="button" data-filter="all">All</button>
           <button class="filter-chip" type="button" data-filter="black-grey">Black & Grey</button>
@@ -116,29 +120,73 @@
           <button class="filter-chip" type="button" data-filter="fine-line">Fine Line</button>
         </div>
         <div class="gallery-grid">
-          <figure class="gallery-item" data-style="black-grey">
+          <figure class="gallery-item" data-style="black-grey" data-artist="Marco">
             <img src="assets/gallery/photo-01.jpg" alt="Tattoo artist working on a client's arm" />
-            <figcaption><span>Studio Session</span><small>Black & Grey</small></figcaption>
+            <figcaption><span>Studio Session</span><small>Black & Grey • Marco</small><a class="artist-jump" href="#artist-marco-gallery">View Marco Gallery</a></figcaption>
           </figure>
-          <figure class="gallery-item" data-style="traditional">
+          <figure class="gallery-item" data-style="traditional" data-artist="Renz">
             <img src="assets/gallery/photo-02.jpg" alt="Tattoo machine needle being loaded with ink" />
-            <figcaption><span>Machine & Ink</span><small>Traditional</small></figcaption>
+            <figcaption><span>Machine & Ink</span><small>Traditional • Renz</small><a class="artist-jump" href="#artist-renz-gallery">View Renz Gallery</a></figcaption>
           </figure>
-          <figure class="gallery-item" data-style="fine-line">
+          <figure class="gallery-item" data-style="fine-line" data-artist="Ivy">
             <img src="assets/gallery/photo-03.jpg" alt="Half sleeve black and white tattoo on arm" />
-            <figcaption><span>Half Sleeve Detail</span><small>Fine Line</small></figcaption>
+            <figcaption><span>Half Sleeve Detail</span><small>Fine Line • Ivy</small><a class="artist-jump" href="#artist-ivy-gallery">View Ivy Gallery</a></figcaption>
           </figure>
-          <figure class="gallery-item" data-style="black-grey">
+          <figure class="gallery-item" data-style="black-grey" data-artist="Marco">
             <img src="assets/gallery/photo-04.jpg" alt="Close-up photo of a phoenix sleeve tattoo" />
-            <figcaption><span>Phoenix Sleeve</span><small>Black & Grey</small></figcaption>
+            <figcaption><span>Phoenix Sleeve</span><small>Black & Grey • Marco</small><a class="artist-jump" href="#artist-marco-gallery">View Marco Gallery</a></figcaption>
           </figure>
-          <figure class="gallery-item" data-style="traditional">
+          <figure class="gallery-item" data-style="traditional" data-artist="Renz">
             <img src="assets/gallery/photo-05.jpg" alt="Man with arm tattoos at a tattoo convention" />
-            <figcaption><span>Convention Piece</span><small>Traditional</small></figcaption>
+            <figcaption><span>Convention Piece</span><small>Traditional • Renz</small><a class="artist-jump" href="#artist-renz-gallery">View Renz Gallery</a></figcaption>
           </figure>
-          <figure class="gallery-item" data-style="fine-line">
+          <figure class="gallery-item" data-style="fine-line" data-artist="Ivy">
             <img src="assets/gallery/photo-06.jpg" alt="Neptune arm tattoo close-up" />
-            <figcaption><span>Mythic Arm Work</span><small>Fine Line</small></figcaption>
+            <figcaption><span>Mythic Arm Work</span><small>Fine Line • Ivy</small><a class="artist-jump" href="#artist-ivy-gallery">View Ivy Gallery</a></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="artist-galleries" class="section container reveal">
+      <p class="section-kicker">By Artist</p>
+      <h2>Artist Galleries</h2>
+      <div id="artist-marco-gallery" class="artist-gallery-block">
+        <h3>Marco - Black & Grey</h3>
+        <div class="gallery-grid artist-gallery-grid">
+          <figure class="gallery-item">
+            <img src="assets/gallery/photo-01.jpg" alt="Marco black and grey studio tattoo session" />
+            <figcaption><span>Studio Session</span><small>Marco</small></figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="assets/gallery/photo-04.jpg" alt="Marco phoenix sleeve black and grey work" />
+            <figcaption><span>Phoenix Sleeve</span><small>Marco</small></figcaption>
+          </figure>
+        </div>
+      </div>
+      <div id="artist-ivy-gallery" class="artist-gallery-block">
+        <h3>Ivy - Fine Line</h3>
+        <div class="gallery-grid artist-gallery-grid">
+          <figure class="gallery-item">
+            <img src="assets/gallery/photo-03.jpg" alt="Ivy fine line half sleeve detail" />
+            <figcaption><span>Half Sleeve Detail</span><small>Ivy</small></figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="assets/gallery/photo-06.jpg" alt="Ivy mythic arm fine line tattoo" />
+            <figcaption><span>Mythic Arm Work</span><small>Ivy</small></figcaption>
+          </figure>
+        </div>
+      </div>
+      <div id="artist-renz-gallery" class="artist-gallery-block">
+        <h3>Renz - Traditional</h3>
+        <div class="gallery-grid artist-gallery-grid">
+          <figure class="gallery-item">
+            <img src="assets/gallery/photo-02.jpg" alt="Renz traditional machine and ink setup" />
+            <figcaption><span>Machine & Ink</span><small>Renz</small></figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="assets/gallery/photo-05.jpg" alt="Renz traditional convention tattoo piece" />
+            <figcaption><span>Convention Piece</span><small>Renz</small></figcaption>
           </figure>
         </div>
       </div>
