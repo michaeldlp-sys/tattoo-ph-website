@@ -751,6 +751,46 @@ textarea:focus {
   flex-wrap: wrap;
 }
 
+.artist-page-head {
+  background: linear-gradient(130deg, #091017 0%, #12202c 42%, #3b2217 100%);
+  border-bottom: 1px solid #ffffff1a;
+}
+
+.artist-page-top {
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.artist-page-brand {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Antonio", sans-serif;
+  font-size: 1.75rem;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.artist-page-back {
+  color: #ffe3cb;
+  text-decoration: none;
+  border: 1px solid #ffffff4a;
+  border-radius: 999px;
+  padding: 0.32rem 0.62rem;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.artist-page-title {
+  margin-bottom: 0.45rem;
+}
+
+.artist-page-grid {
+  margin-top: 1rem;
+}
+
 .reveal {
   opacity: 1;
   transform: translateY(0);
@@ -802,6 +842,12 @@ textarea:focus {
 
   .hero-content {
     padding-top: 2.2rem;
+  }
+
+  .artist-page-top {
+    min-height: 62px;
+    flex-wrap: wrap;
+    padding: 0.65rem 0;
   }
 
   .mobile-cta {
