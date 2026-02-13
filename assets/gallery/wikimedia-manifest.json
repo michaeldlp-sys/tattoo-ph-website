@@ -1,0 +1,44 @@
+[
+  {
+    "index": 1,
+    "file": "assets/gallery/photo-01.jpg",
+    "title": "Italian tattoo artist at work",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Italian-tattoo-artist-at-work.jpg",
+    "license": "Wikimedia Commons"
+  },
+  {
+    "index": 2,
+    "file": "assets/gallery/photo-02.jpg",
+    "title": "Loading rotary tattoo machine needle tip with ink",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/d/d4/19-Loading_rotary_tattoo_machine_needle_tip_with_ink.jpg",
+    "license": "Wikimedia Commons"
+  },
+  {
+    "index": 3,
+    "file": "assets/gallery/photo-03.jpg",
+    "title": "Angel half sleeve black and white tattoo",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Angel_Half_Sleeve_Black_and_White_Tattoo.jpg",
+    "license": "Wikimedia Commons"
+  },
+  {
+    "index": 4,
+    "file": "assets/gallery/photo-04.jpg",
+    "title": "Close-up phoenix full sleeve tattoo",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/1/14/Close-up_Phoenix_full_sleeve_tattoo_by_Maaika.jpg",
+    "license": "Wikimedia Commons"
+  },
+  {
+    "index": 5,
+    "file": "assets/gallery/photo-05.jpg",
+    "title": "Man with arm tattoo at Brussels Tattoo Convention 2023",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/1/10/Man_with_arm_tattoo_at_the_International_Brussels_Tattoo_Convention_2023.jpg",
+    "license": "Wikimedia Commons"
+  },
+  {
+    "index": 6,
+    "file": "assets/gallery/photo-06.jpg",
+    "title": "Arm tattoo of Neptune",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Arm_tattoo_of_Neptune.jpg",
+    "license": "Wikimedia Commons"
+  }
+]
