@@ -19,8 +19,10 @@
         <span>Inkso Tattoo</span>
       </a>
       <div class="nav-links">
+        <a href="#artists">Artists</a>
         <a href="#portfolio">Styles</a>
         <a href="#process">Process</a>
+        <a href="#care">Aftercare</a>
         <a href="#book">Book</a>
       </div>
     </nav>
@@ -41,10 +43,48 @@
         <li>Custom Design Only</li>
         <li>Strict Hygiene Standards</li>
       </ul>
+      <div class="trust-strip">
+        <p><strong>24h</strong> inquiry response</p>
+        <p><strong>Licensed</strong> studio workflow</p>
+        <p><strong>Single-use</strong> sterile setup</p>
+        <p><strong>Custom</strong> artist-led design</p>
+      </div>
     </div>
   </header>
 
   <main>
+    <section id="artists" class="section container reveal">
+      <p class="section-kicker">Artist Lineup</p>
+      <h2>Choose Your Artist</h2>
+      <p class="artist-note">Match with an artist whose style aligns with your concept before booking.</p>
+      <div class="artist-grid">
+        <article class="artist-card">
+          <img src="https://placehold.co/600x720/1a1a1a/e8e8e8?text=Artist+01" alt="Artist profile placeholder one" />
+          <div>
+            <h3>Marco</h3>
+            <p>Black & Grey realism, portrait layering, sleeve composition.</p>
+            <p class="artist-tags">#blackgrey #realism #portrait</p>
+          </div>
+        </article>
+        <article class="artist-card">
+          <img src="https://placehold.co/600x720/141414/f3d0b5?text=Artist+02" alt="Artist profile placeholder two" />
+          <div>
+            <h3>Ivy</h3>
+            <p>Fine line florals, script work, minimalist body flow placements.</p>
+            <p class="artist-tags">#fineline #script #minimal</p>
+          </div>
+        </article>
+        <article class="artist-card">
+          <img src="https://placehold.co/600x720/191919/f0d9be?text=Artist+03" alt="Artist profile placeholder three" />
+          <div>
+            <h3>Renz</h3>
+            <p>Traditional and neo-traditional color packs with bold contrast.</p>
+            <p class="artist-tags">#traditional #color #neo-traditional</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section id="portfolio" class="section container reveal">
       <p class="section-kicker">Specialties</p>
       <h2>Featured Styles</h2>
@@ -114,6 +154,25 @@
       </ol>
     </section>
 
+    <section id="care" class="section container reveal">
+      <p class="section-kicker">Studio Standards</p>
+      <h2>Aftercare & Policies</h2>
+      <div class="care-grid">
+        <article class="care-card">
+          <h3>Aftercare Basics</h3>
+          <p>Clean gently 2-3x daily, use light aftercare balm, avoid soaking and direct sun during healing.</p>
+        </article>
+        <article class="care-card">
+          <h3>Booking Policy</h3>
+          <p>Appointment slot is secured by deposit. Design revisions are finalized before session day.</p>
+        </article>
+        <article class="care-card">
+          <h3>Session Prep</h3>
+          <p>Sleep well, hydrate, and eat before your schedule. Avoid alcohol before and immediately after your session.</p>
+        </article>
+      </div>
+    </section>
+
     <section id="book" class="section section-accent reveal">
       <div class="container booking-layout">
         <div class="booking-copy">
@@ -132,17 +191,45 @@
         </div>
 
         <form id="inquiry-form" class="form booking-form">
-          <div class="form-row">
-            <input type="text" name="name" placeholder="Your name" aria-label="Your name" required />
-            <input type="email" name="email" placeholder="Email address" aria-label="Email address" required />
+          <div class="form-steps">
+            <span class="step-dot is-active">Step 1: Tattoo Brief</span>
+            <span class="step-dot">Step 2: Contact Details</span>
           </div>
-          <div class="form-row">
-            <input type="text" name="placement" placeholder="Preferred placement (e.g. forearm)" aria-label="Preferred placement" />
-            <input type="text" name="size" placeholder="Approx. size (inches/cm)" aria-label="Approximate size" />
-          </div>
-          <textarea rows="5" name="idea" placeholder="Describe your concept, style, and references" required></textarea>
-          <p class="form-note">Include budget range and target date for faster scheduling.</p>
-          <button type="submit" class="btn">Send Inquiry</button>
+
+          <fieldset class="form-panel" data-step="1">
+            <div class="form-row">
+              <input type="text" name="placement" placeholder="Preferred placement (e.g. forearm)" aria-label="Preferred placement" required />
+              <input type="text" name="size" placeholder="Approx. size (inches/cm)" aria-label="Approximate size" required />
+            </div>
+            <div class="form-row">
+              <input type="text" name="budget" placeholder="Budget range" aria-label="Budget range" />
+              <select name="artist" aria-label="Preferred artist">
+                <option value="">Preferred artist (optional)</option>
+                <option value="Marco">Marco</option>
+                <option value="Ivy">Ivy</option>
+                <option value="Renz">Renz</option>
+              </select>
+            </div>
+            <textarea rows="5" name="idea" placeholder="Describe your concept, style, and references" required></textarea>
+            <button type="button" class="btn next-step">Continue</button>
+          </fieldset>
+
+          <fieldset class="form-panel is-hidden" data-step="2">
+            <div class="form-row">
+              <input type="text" name="name" placeholder="Your name" aria-label="Your name" required />
+              <input type="email" name="email" placeholder="Email address" aria-label="Email address" required />
+            </div>
+            <div class="form-row">
+              <input type="tel" name="phone" placeholder="Mobile number" aria-label="Mobile number" />
+              <input type="text" name="instagram" placeholder="Instagram username" aria-label="Instagram username" />
+            </div>
+            <p class="form-note">We usually respond within 24 hours with next steps and schedule options.</p>
+            <div class="form-actions">
+              <button type="button" class="btn btn-back back-step">Back</button>
+              <button type="submit" class="btn">Send Inquiry</button>
+            </div>
+          </fieldset>
+
           <p id="form-status" class="form-status" aria-live="polite"></p>
         </form>
       </div>
@@ -156,6 +243,12 @@
       <p>© <span id="year"></span> Inkso Tattoo</p>
     </div>
   </footer>
+
+  <div class="mobile-cta">
+    <a href="#book">Book Now</a>
+    <a href="https://www.instagram.com/inkso.studio/?hl=en">Instagram</a>
+    <a href="https://web.facebook.com/InksoTattoo">Facebook</a>
+  </div>
 
   <div id="lightbox" class="lightbox" aria-hidden="true">
     <button id="lightbox-close" class="lightbox-close" type="button" aria-label="Close image preview">Close</button>

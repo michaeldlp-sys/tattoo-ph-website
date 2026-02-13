@@ -10,6 +10,19 @@ const lightbox = document.getElementById("lightbox");
 const lightboxImage = document.getElementById("lightbox-image");
 const lightboxCaption = document.getElementById("lightbox-caption");
 const lightboxClose = document.getElementById("lightbox-close");
+const nextStepButton = document.querySelector(".next-step");
+const backStepButton = document.querySelector(".back-step");
+const formPanels = document.querySelectorAll(".form-panel");
+const formStepDots = document.querySelectorAll(".step-dot");
+
+function setFormStep(step) {
+  formPanels.forEach((panel) => {
+    panel.classList.toggle("is-hidden", panel.dataset.step !== String(step));
+  });
+  formStepDots.forEach((dot, index) => {
+    dot.classList.toggle("is-active", index + 1 === step);
+  });
+}
 
 if (year) {
   year.textContent = String(new Date().getFullYear());
@@ -37,12 +50,31 @@ if ("IntersectionObserver" in window) {
 }
 
 if (form && status) {
+  setFormStep(1);
+
+  if (nextStepButton) {
+    nextStepButton.addEventListener("click", () => {
+      const requiredStepOneFields = Array.from(
+        form.querySelectorAll('[data-step="1"] [required]')
+      );
+      const isValid = requiredStepOneFields.every((field) => field.reportValidity());
+      if (isValid) {
+        setFormStep(2);
+      }
+    });
+  }
+
+  if (backStepButton) {
+    backStepButton.addEventListener("click", () => setFormStep(1));
+  }
+
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     const data = new FormData(form);
     const name = String(data.get("name") || "there").trim();
     status.textContent = `Thanks, ${name}. Your inquiry was captured. Connect this form to email next.`;
     form.reset();
+    setFormStep(1);
   });
 }
 
