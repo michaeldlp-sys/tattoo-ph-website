@@ -1,3 +1,5 @@
+document.documentElement.classList.add("js");
+
 const form = document.getElementById("inquiry-form");
 const status = document.getElementById("form-status");
 const year = document.getElementById("year");
