@@ -4,6 +4,12 @@ const form = document.getElementById("inquiry-form");
 const status = document.getElementById("form-status");
 const year = document.getElementById("year");
 const revealItems = document.querySelectorAll(".reveal");
+const filterChips = document.querySelectorAll(".filter-chip");
+const galleryItems = document.querySelectorAll(".gallery-item");
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightbox-image");
+const lightboxCaption = document.getElementById("lightbox-caption");
+const lightboxClose = document.getElementById("lightbox-close");
 
 if (year) {
   year.textContent = String(new Date().getFullYear());
@@ -39,3 +45,72 @@ if (form && status) {
     form.reset();
   });
 }
+
+if (filterChips.length && galleryItems.length) {
+  filterChips.forEach((chip) => {
+    chip.addEventListener("click", () => {
+      const selected = chip.dataset.filter || "all";
+
+      filterChips.forEach((item) => item.classList.remove("is-active"));
+      chip.classList.add("is-active");
+
+      galleryItems.forEach((card) => {
+        const style = card.dataset.style || "";
+        const isVisible = selected === "all" || style === selected;
+        card.classList.toggle("is-hidden", !isVisible);
+      });
+    });
+  });
+}
+
+function closeLightbox() {
+  if (!lightbox || !lightboxImage) {
+    return;
+  }
+
+  lightbox.classList.remove("is-open");
+  lightbox.setAttribute("aria-hidden", "true");
+  lightboxImage.src = "";
+  lightboxImage.alt = "";
+  if (lightboxCaption) {
+    lightboxCaption.textContent = "";
+  }
+}
+
+if (galleryItems.length && lightbox && lightboxImage) {
+  galleryItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      const image = item.querySelector("img");
+      const caption = item.querySelector("figcaption span");
+      if (!image) {
+        return;
+      }
+
+      lightboxImage.src = image.src;
+      lightboxImage.alt = image.alt || "Tattoo gallery preview";
+      if (lightboxCaption) {
+        lightboxCaption.textContent = caption ? caption.textContent : "";
+      }
+      lightbox.classList.add("is-open");
+      lightbox.setAttribute("aria-hidden", "false");
+    });
+  });
+}
+
+if (lightboxClose) {
+  lightboxClose.addEventListener("click", closeLightbox);
+}
+
+if (lightbox) {
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+  });
+}
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeLightbox();
+  }
+});
