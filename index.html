@@ -7,7 +7,7 @@
   <meta name="description" content="Custom tattoo studio in the Philippines. Clean lines, bold stories, island soul." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sora:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -95,18 +95,32 @@
 
     <section id="book" class="section section-accent reveal">
       <div class="container booking-layout">
-        <div>
+        <div class="booking-copy">
           <p class="section-kicker">Inquiries</p>
           <h2>Start Your Design</h2>
-          <p>Tell us your idea, size, and placement. We reply within 24 hours.</p>
-          <p class="contact-line">Instagram: <a href="#">@inkislands.cebu</a></p>
-          <p class="contact-line">Facebook: <a href="#">Ink Islands Tattoo Studio</a></p>
+          <p class="booking-intro">Tell us your idea, size, and placement. We reply within 24 hours with schedule options and next steps.</p>
+          <ul class="booking-points">
+            <li>Custom sketch planning before session day</li>
+            <li>Clear pricing based on size, detail, and placement</li>
+            <li>Sterile workstation and single-use setup</li>
+          </ul>
+          <div class="contact-rail">
+            <p class="contact-line">Instagram: <a href="#">@inkislands.cebu</a></p>
+            <p class="contact-line">Facebook: <a href="#">Ink Islands Tattoo Studio</a></p>
+          </div>
         </div>
 
-        <form id="inquiry-form" class="form">
-          <input type="text" name="name" placeholder="Your name" aria-label="Your name" required />
-          <input type="email" name="email" placeholder="Email address" aria-label="Email address" required />
-          <textarea rows="4" name="idea" placeholder="Tattoo idea" required></textarea>
+        <form id="inquiry-form" class="form booking-form">
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Your name" aria-label="Your name" required />
+            <input type="email" name="email" placeholder="Email address" aria-label="Email address" required />
+          </div>
+          <div class="form-row">
+            <input type="text" name="placement" placeholder="Preferred placement (e.g. forearm)" aria-label="Preferred placement" />
+            <input type="text" name="size" placeholder="Approx. size (inches/cm)" aria-label="Approximate size" />
+          </div>
+          <textarea rows="5" name="idea" placeholder="Describe your concept, style, and references" required></textarea>
+          <p class="form-note">Include budget range and target date for faster scheduling.</p>
           <button type="submit" class="btn">Send Inquiry</button>
           <p id="form-status" class="form-status" aria-live="polite"></p>
         </form>

@@ -20,7 +20,10 @@ if ("IntersectionObserver" in window) {
     { threshold: 0.2 }
   );
 
-  revealItems.forEach((item) => observer.observe(item));
+  revealItems.forEach((item, index) => {
+    item.style.transitionDelay = `${index * 80}ms`;
+    observer.observe(item);
+  });
 } else {
   revealItems.forEach((item) => item.classList.add("visible"));
 }
@@ -30,7 +33,6 @@ if (form && status) {
     event.preventDefault();
     const data = new FormData(form);
     const name = String(data.get("name") || "there").trim();
-
     status.textContent = `Thanks, ${name}. Your inquiry was captured. Connect this form to email next.`;
     form.reset();
   });
