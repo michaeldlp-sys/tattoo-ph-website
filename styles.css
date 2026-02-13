@@ -48,7 +48,10 @@ a {
   color: #fff;
   padding-bottom: 4.3rem;
   background:
-    linear-gradient(130deg, #091017 0%, #12202c 42%, #3b2217 100%);
+    linear-gradient(120deg, #070f16d9 6%, #101b27c4 44%, #2e1a11a8 100%),
+    url("assets/hero/hero.jpg");
+  background-size: cover;
+  background-position: center 34%;
 }
 
 .hero::before {
