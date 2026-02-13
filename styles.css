@@ -595,9 +595,16 @@ textarea:focus {
 
   .hero {
     padding-bottom: 2.95rem;
+    background-position: 58% 30%;
   }
 
   .hero-content {
     padding-top: 2.2rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero {
+    background-position: 62% 24%;
   }
 }
